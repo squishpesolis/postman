@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "853ad1dd-e1c6-4a65-b645-ebf6a4468293",
+		"name": "Iot-Rest",
+		"description": "Servicos rest Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Modulo Seguridad",
+			"item": [
+				{
+					"name": "CrearEditarUsuarioRest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombreUsuario\": \"Joel Quishpe1\",\n\t\"codigo\":\"101010\",\n\t\"clave\":\"12345\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"09871881379\",\n\t\"predeterminado\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerPorIdUsuarioREst",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/buscarPorId?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"buscarPorId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorPreterminadoUsuarioRest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/buscarPorPreterminado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"buscarPorPreterminado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario ObtenerPorPagina cRITERIO Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0, \"size\": 5,  \"listaBuscarCriterio\":[{\"key\":\"codigo\", \"value\":[\"8888\", \"commit\"], \"operacion\": \"NOT_IN\"}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"obtenerListaPorPaginacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearEditarUsuarioRest Posgrest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombreUsuario\": \"Ricado Quishpe15\",\n\t\"codigo\":\"8888\",\n\t\"clave\":\"12345\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"098718813713\",\n\t\"predeterminado\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
