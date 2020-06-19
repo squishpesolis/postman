@@ -7,17 +7,104 @@
 	},
 	"item": [
 		{
-			"name": "ProbarServidor",
+			"name": "Usuario: Obtener todos los usuarios",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001",
+					"raw": "http://localhost:3001/usuario",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3001"
+					"port": "3001",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario:GuardarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "test1",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test1@tes1.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ADMIN_ROLE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario:Editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "testActualizar2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@test2.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/usuario/5eed491d7df12d1530ec0d52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"usuario",
+						"5eed491d7df12d1530ec0d52"
+					]
 				}
 			},
 			"response": []
