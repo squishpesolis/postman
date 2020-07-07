@@ -10,7 +10,7 @@
 			"name": "Modulo Seguridad",
 			"item": [
 				{
-					"name": "CrearEditarUsuarioRest",
+					"name": "Usuario:CrearEditarUsuarioRest",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -18,12 +18,18 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "asdsadsadasdasdasdas",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nombreUsuario\": \"Joel Quishpe1\",\n\t\"codigo\":\"101010\",\n\t\"clave\":\"12345\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"09871881379\",\n\t\"predeterminado\": 1\n}",
+							"raw": "{\n\t\"nombreUsuario\": \"Joel Quishpe77\",\n\t\"password\":\"123456\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"09871881379\",\n\t\"email\": \"test7777@test.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -40,6 +46,128 @@
 							"path": [
 								"usuario",
 								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario:Registrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombreUsuario\": \"Joel Quishpe77\",\n\t\"clave\":\"12345\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"09871881379\",\n\t\"email\": \"test7777@test.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario:generarToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"stalin.ct@gmail.com\",\n\t\"password\": \"commitSolu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/login/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"login",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario:Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test10@test.10com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"login"
 							]
 						}
 					},
@@ -70,7 +198,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/buscarPorId?id=2",
+							"raw": "http://localhost:8091/usuario/buscarPorId?id=12",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -83,7 +211,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "12"
 								}
 							]
 						}
@@ -130,7 +258,57 @@
 					"response": []
 				},
 				{
-					"name": "Usuario ObtenerPorPagina cRITERIO Copy",
+					"name": "Usuario ObtenerPorPagina:TODOS",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":5,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTFAdGVzdC4xMWNvbSIsImV4cCI6MTU5NDE1MTE5NywiaWF0IjoxNTk0MDc5MTk3fQ.lf7N1oaYHCysnUkl_xyTeL2WLrB2KloZsfuU-2RZLeY",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTFAdGVzdC4xMWNvbSIsImV4cCI6MTU5NDE1MTE5NywiaWF0IjoxNTk0MDc5MTk3fQ.lf7N1oaYHCysnUkl_xyTeL2WLrB2KloZsfuU-2RZLeY"
+								}
+							]
+						},
+						"description": "Obtener por pagina es un servicio el cual entrega todos los usuarios\r\nAtributos:\r\nsize: numero de elementos que se quiere que traiga en la pagina\r\npagina: numero de pagina donde se quiere buscar\r\norder: 1 = descending OPCIONAL\r\norder: 0 = ascending  OPCIONAL\r\ncampoOrdenar: nombre del capo a ordenar por defecto fechaCreacion OPCIONAÑ\r\nlistaBuscarCriterio: AQUI SI SE QUIERE ALGUNA BUSQUEDA SE ENDRA QUE ESPEFIcar\r\n\r\nEjemplo 1:\r\nBusca en el campo \"email\" todo lo que coincidan con el .com\r\n{\r\n   \"pagina\":1,\r\n   \"size\":5,\r\n   \"order\": 1\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario ObtenerPorPagina Copy",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -166,6 +344,60 @@
 					"response": []
 				},
 				{
+					"name": "PERFIL:MODIFICAR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 33,\r\n    \"nombre\": \"test1MODI\",\r\n\t\"email\": \"test10@test.10com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/modificarPerfil?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTBAdGVzdC4xMGNvbSIsImV4cCI6MTU5NDE0OTkyNCwiaWF0IjoxNTk0MDc3OTI0fQ.jcx5GqBmPZqlYh8GDui_rpI-cDuyCa3ddaVRRET7OFs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"modificarPerfil"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTBAdGVzdC4xMGNvbSIsImV4cCI6MTU5NDE0OTkyNCwiaWF0IjoxNTk0MDc3OTI0fQ.jcx5GqBmPZqlYh8GDui_rpI-cDuyCa3ddaVRRET7OFs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "CrearEditarUsuarioRest Posgrest",
 					"request": {
 						"method": "POST",
@@ -174,7 +406,14 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTkzODA1NjczLCJpYXQiOjE1OTM3MzM2NzN9.OGV0fl0-EVV_CWnw7wrXGX7wU9aJY1CzrVFPsSDKjII",
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -187,7 +426,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/",
+							"raw": "http://localhost:8091/usuario/guardar",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -195,9 +434,138 @@
 							"port": "8091",
 							"path": [
 								"usuario",
-								""
+								"guardar"
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "JWT:PRUEBA",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTkzNTM2ODA2LCJpYXQiOjE1OTM0NjQ4MDZ9.cTftBFa_EBKktSMyT_JVm8yoKUoqIae0_MxCR2K3v8s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/login/prueba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"login",
+								"prueba"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Carga de archivos",
+			"item": [
+				{
+					"name": "Usuario:Carga:imagenes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTBAdGVzdC4xMGNvbSIsImV4cCI6MTU5MzgyNTA5MCwiaWF0IjoxNTkzNzUzMDkwfQ.TZKTyWdJqdytXATDCO4ebGSU_5a5x_-E50jPCNT19aM",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "archivo",
+									"type": "file",
+									"src": "/C:/Users/Stalyn-Ricardo/Pictures/descarga.jpg"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/upload/?id=112&Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTBAdGVzdC4xMGNvbSIsImV4cCI6MTU5NDA4MDc1MiwiaWF0IjoxNTk0MDA4NzUyfQ.wcckyGkXNm1kVrRXaxHllx5tq54A0qgKbQdAZK3Fw5A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"upload",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "112"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTBAdGVzdC4xMGNvbSIsImV4cCI6MTU5NDA4MDc1MiwiaWF0IjoxNTk0MDA4NzUyfQ.wcckyGkXNm1kVrRXaxHllx5tq54A0qgKbQdAZK3Fw5A"
+								}
+							]
+						},
+						"description": "Puedes carga png, jpg"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario:Descargar:Imagenes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTkzODA1NjczLCJpYXQiOjE1OTM3MzM2NzN9.OGV0fl0-EVV_CWnw7wrXGX7wU9aJY1CzrVFPsSDKjII",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/dowload/?img=12-1593725601472.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"dowload",
+								""
+							],
+							"query": [
+								{
+									"key": "img",
+									"value": "12-1593725601472.jpg"
+								}
+							]
+						},
+						"description": "Puedes carga png, jpg"
 					},
 					"response": []
 				}
