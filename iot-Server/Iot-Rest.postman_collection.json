@@ -278,7 +278,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":5,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}",
+							"raw": "{\"pagina\":1,\"size\":5,\"order\":0,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -286,7 +286,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTFAdGVzdC4xMWNvbSIsImV4cCI6MTU5NDE1MTE5NywiaWF0IjoxNTk0MDc5MTk3fQ.lf7N1oaYHCysnUkl_xyTeL2WLrB2KloZsfuU-2RZLeY",
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0NzM2MTQsImlhdCI6MTU5NDQwMTYxNH0.4qRg354U3YOzBkdltDzbk1NP9lKUCbP_RWUeB68vTTY",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -299,11 +299,111 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MTFAdGVzdC4xMWNvbSIsImV4cCI6MTU5NDE1MTE5NywiaWF0IjoxNTk0MDc5MTk3fQ.lf7N1oaYHCysnUkl_xyTeL2WLrB2KloZsfuU-2RZLeY"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0NzM2MTQsImlhdCI6MTU5NDQwMTYxNH0.4qRg354U3YOzBkdltDzbk1NP9lKUCbP_RWUeB68vTTY"
 								}
 							]
 						},
 						"description": "Obtener por pagina es un servicio el cual entrega todos los usuarios\r\nAtributos:\r\nsize: numero de elementos que se quiere que traiga en la pagina\r\npagina: numero de pagina donde se quiere buscar\r\norder: 1 = descending OPCIONAL\r\norder: 0 = ascending  OPCIONAL\r\ncampoOrdenar: nombre del capo a ordenar por defecto fechaCreacion OPCIONAÑ\r\nlistaBuscarCriterio: AQUI SI SE QUIERE ALGUNA BUSQUEDA SE ENDRA QUE ESPEFIcar\r\n\r\nEjemplo 1:\r\nBusca en el campo \"email\" todo lo que coincidan con el .com\r\n{\r\n   \"pagina\":1,\r\n   \"size\":5,\r\n   \"order\": 1\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario ObtenerPorPagina: CON DOS CONDICIONES O MAS SOLO (OR)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":20,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"stal\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ1MTEyMjUsImlhdCI6MTU5NDQzOTIyNX0.-NtggrY7eSowrS0FEVJANaBaQBot2qMlTzUvjiYniFw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ1MTEyMjUsImlhdCI6MTU5NDQzOTIyNX0.-NtggrY7eSowrS0FEVJANaBaQBot2qMlTzUvjiYniFw"
+								}
+							]
+						},
+						"description": "Obtener por pagina es un servicio el cual entrega todos los usuarios\r\nAtributos:\r\nsize: numero de elementos que se quiere que traiga en la pagina\r\npagina: numero de pagina donde se quiere buscar\r\norder: 1 = descending OPCIONAL\r\norder: 0 = ascending  OPCIONAL\r\ncampoOrdenar: nombre del capo a ordenar por defecto fechaCreacion OPCIONAÑ\r\nlistaBuscarCriterio: AQUI SI SE QUIERE ALGUNA BUSQUEDA SE ENDRA QUE ESPEFIcar\r\n\r\nEjemplo 1:\r\nBusca en el campo \"email\" todo lo que coincidan con el .com\r\n{\r\n   \"pagina\":1,\r\n   \"size\":5,\r\n   \"order\": 1\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario: Contar Registros",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":1,\"size\":0,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/contarRegistros?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0MTc0NjgsImlhdCI6MTU5NDM0NTQ2OH0.ZeQ8WuAuDpNKWxNQ9FF03pA4CQ2io02H-9UbHtbH4xI",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"contarRegistros"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0MTc0NjgsImlhdCI6MTU5NDM0NTQ2OH0.ZeQ8WuAuDpNKWxNQ9FF03pA4CQ2io02H-9UbHtbH4xI"
+								}
+							]
+						},
+						"description": "Contrar: retorna un long con el numero de registros que coinciden con la busqueda\r\n Parametros\r\n Solo va a tomar en cuenta listaBuscarCriterio[], pero no se deben quitar las \r\n demas propiedades del objeto\r\n {\r\n   \"pagina\":0,\r\n   \"size\":5,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"test\"], \"operacion\": \"MATCH\"}\r\n     ,{\"key\":\"nombre\", \"value\":[\"prue\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
 					},
 					"response": []
 				},
