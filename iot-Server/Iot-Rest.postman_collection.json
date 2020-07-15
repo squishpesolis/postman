@@ -52,6 +52,49 @@
 					"response": []
 				},
 				{
+					"name": "Usuario:Eliminar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"fechaCreacion\":\"2020-07-13\",\"usuarioCreacion\":\"makerSolu\",\"fechaModificacion\":null,\"usuarioModificacion\":null,\"eliminado\":true,\"idUsuario\":66,\"nombre\":\"test95\",\"password\":\"$2a$10$H9G5Tao5KlUHFsPbewmvB.dFfI868Xjk7kt9ohn0AjgDHXehqxnzi\",\"nombre1\":\"test95\",\"nombre2\":null,\"genero\":null,\"direccion\":null,\"identificacion\":\"\",\"email\":\"test95@95test.com\",\"img\":null,\"google\":false,\"activo\":true,\"telefono\":null,\"token\":null,\"roles\":[{\"fechaCreacion\":\"2020-07-06\",\"usuarioCreacion\":\"makerSolu\",\"fechaModificacion\":null,\"usuarioModificacion\":null,\"eliminado\":false,\"idRol\":2,\"rol\":\"ROLE_USER\",\"privilegios\":[{\"fechaCreacion\":\"2020-07-06\",\"usuarioCreacion\":\"makerSolu\",\"fechaModificacion\":null,\"usuarioModificacion\":null,\"eliminado\":false,\"idPrivilegio\":1,\"nombre\":\"READ_PRIVILEGE\",\"id\":1},{\"fechaCreacion\":\"2020-07-06\",\"usuarioCreacion\":\"makerSolu\",\"fechaModificacion\":null,\"usuarioModificacion\":null,\"eliminado\":false,\"idPrivilegio\":3,\"nombre\":\"CHANGE_PASSWORD_PRIVILEGE\",\"id\":3}],\"id\":2}],\"id\":66}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ4MzI5NjMsImlhdCI6MTU5NDc2MDk2M30.ueGh7rmcuG4DeMzjEZjkmxVrsxR-by5rE0XWTZZTbt8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ4MzI5NjMsImlhdCI6MTU5NDc2MDk2M30.ueGh7rmcuG4DeMzjEZjkmxVrsxR-by5rE0XWTZZTbt8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Usuario:Registrar",
 					"request": {
 						"method": "POST",
@@ -278,7 +321,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"pagina\":1,\"size\":5,\"order\":0,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -286,7 +329,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0NzM2MTQsImlhdCI6MTU5NDQwMTYxNH0.4qRg354U3YOzBkdltDzbk1NP9lKUCbP_RWUeB68vTTY",
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3NDE4MTQsImlhdCI6MTU5NDY2OTgxNH0.dk-HFJ019NrGXGaHHbETphqUB9IaWDE315H-CVv-bQE",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -299,7 +342,7 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0NzM2MTQsImlhdCI6MTU5NDQwMTYxNH0.4qRg354U3YOzBkdltDzbk1NP9lKUCbP_RWUeB68vTTY"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3NDE4MTQsImlhdCI6MTU5NDY2OTgxNH0.dk-HFJ019NrGXGaHHbETphqUB9IaWDE315H-CVv-bQE"
 								}
 							]
 						},
@@ -328,7 +371,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":20,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"stal\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}",
+							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":20,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"stal\"], \"operacion\": \"MATCH\"},\r\n     {\"key\":\"role\", \"value\":[\"ROLE_ADMIN\"], \"operacion\": \"EQUAL\"}\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -336,7 +379,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ1MTEyMjUsImlhdCI6MTU5NDQzOTIyNX0.-NtggrY7eSowrS0FEVJANaBaQBot2qMlTzUvjiYniFw",
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3Mjg0NjUsImlhdCI6MTU5NDY1NjQ2NX0.Mvt5zVXE8RohUhW4bfCnAZcPt4ACq6FbqEDlmJFbFUU",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -349,7 +392,57 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ1MTEyMjUsImlhdCI6MTU5NDQzOTIyNX0.-NtggrY7eSowrS0FEVJANaBaQBot2qMlTzUvjiYniFw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3Mjg0NjUsImlhdCI6MTU5NDY1NjQ2NX0.Mvt5zVXE8RohUhW4bfCnAZcPt4ACq6FbqEDlmJFbFUU"
+								}
+							]
+						},
+						"description": "Obtener por pagina es un servicio el cual entrega todos los usuarios\r\nAtributos:\r\nsize: numero de elementos que se quiere que traiga en la pagina\r\npagina: numero de pagina donde se quiere buscar\r\norder: 1 = descending OPCIONAL\r\norder: 0 = ascending  OPCIONAL\r\ncampoOrdenar: nombre del capo a ordenar por defecto fechaCreacion OPCIONAÑ\r\nlistaBuscarCriterio: AQUI SI SE QUIERE ALGUNA BUSQUEDA SE ENDRA QUE ESPEFIcar\r\n\r\nEjemplo 1:\r\nBusca en el campo \"email\" todo lo que coincidan con el .com\r\n{\r\n   \"pagina\":1,\r\n   \"size\":5,\r\n   \"order\": 1\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario ObtenerPorPagina: CON FILTRO JOIN (ROL)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":20,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"stal\"], \"operacion\": \"MATCH\"},\r\n     {\"key\":\"role\", \"value\":[\"ROLE_ADMIN\"], \"operacion\": \"EQUAL\"}\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3Mjg0NjUsImlhdCI6MTU5NDY1NjQ2NX0.Mvt5zVXE8RohUhW4bfCnAZcPt4ACq6FbqEDlmJFbFUU",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3Mjg0NjUsImlhdCI6MTU5NDY1NjQ2NX0.Mvt5zVXE8RohUhW4bfCnAZcPt4ACq6FbqEDlmJFbFUU"
 								}
 							]
 						},
@@ -400,6 +493,56 @@
 								{
 									"key": "Authorization",
 									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ0MTc0NjgsImlhdCI6MTU5NDM0NTQ2OH0.ZeQ8WuAuDpNKWxNQ9FF03pA4CQ2io02H-9UbHtbH4xI"
+								}
+							]
+						},
+						"description": "Contrar: retorna un long con el numero de registros que coinciden con la busqueda\r\n Parametros\r\n Solo va a tomar en cuenta listaBuscarCriterio[], pero no se deben quitar las \r\n demas propiedades del objeto\r\n {\r\n   \"pagina\":0,\r\n   \"size\":5,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"test\"], \"operacion\": \"MATCH\"}\r\n     ,{\"key\":\"nombre\", \"value\":[\"prue\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario: Contar Registros con Filtro JOIN (ROL)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"pagina\":0,\r\n   \"size\":20,\r\n   \"order\": 0,\r\n   \"campoOrdenar\": \"fechaCreacion\",\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\"stal\"], \"operacion\": \"MATCH\"},\r\n     {\"key\":\"role\", \"value\":[\"ROLE_ADMIN\"], \"operacion\": \"EQUAL\"}\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/contarRegistros?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3Mjg0NjUsImlhdCI6MTU5NDY1NjQ2NX0.Mvt5zVXE8RohUhW4bfCnAZcPt4ACq6FbqEDlmJFbFUU",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"contarRegistros"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3Mjg0NjUsImlhdCI6MTU5NDY1NjQ2NX0.Mvt5zVXE8RohUhW4bfCnAZcPt4ACq6FbqEDlmJFbFUU"
 								}
 							]
 						},
