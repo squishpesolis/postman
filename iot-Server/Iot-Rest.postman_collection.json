@@ -10,6 +10,39 @@
 			"name": "Modulo Seguridad",
 			"item": [
 				{
+					"name": "ROL",
+					"item": [
+						{
+							"name": "ROl:ObtenerTodosLosRoles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8091/role/obtenerTodo?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NTU4ODU5MiwiaWF0IjoxNTk1NTE2NTkyfQ.T1r9x-z2zJuWRn4YqXIe1QVLQLpMaZmsZ2ADKBfETCA",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8091",
+									"path": [
+										"role",
+										"obtenerTodo"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NTU4ODU5MiwiaWF0IjoxNTk1NTE2NTkyfQ.T1r9x-z2zJuWRn4YqXIe1QVLQLpMaZmsZ2ADKBfETCA"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Usuario:CrearEditarUsuarioRest",
 					"request": {
 						"method": "POST",
@@ -20,16 +53,11 @@
 								"value": "application/json",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "Authorization",
-								"value": "asdsadsadasdasdasdas",
-								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nombreUsuario\": \"Joel Quishpe77\",\n\t\"password\":\"123456\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"09871881379\",\n\t\"email\": \"test7777@test.com\"\n}",
+							"raw": "{\n   \"nombre\":\"test3\",\n   \"password\":\"123456\",\n   \"nombre1\":\"test3\",\n   \"identificacion\":\"1722439120\",\n   \"activo\":false,\n   \"email\":\"test3@test3.com\",\n   \"idUsuario\":null,\n   \"nombre2\":\"\",\n   \"direccion\":\"\",\n   \"img\":\"\",\n   \"google\":false,\n   \"id\":null,\n   \"token\":\"\",\n   \"roles\":[\n      {\n         \"fechaCreacion\":\"2020-07-24\",\n         \"usuarioCreacion\":\"makerSolu\",\n         \"fechaModificacion\":null,\n         \"usuarioModificacion\":null,\n         \"eliminado\":false,\n         \"idRol\":1,\n         \"rol\":\"ROLE_ADMIN\",\n         \"id\":1\n      }\n   ],\n   \"eliminado\":false\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -37,7 +65,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/guardar",
+							"raw": "http://localhost:8091/usuario/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTk1Njc3OTgzLCJpYXQiOjE1OTU2MDU5ODN9.-PFxfL_uYlATsUjP2HfNqNsFTgA1G3j0qGOf8ScTXXU",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -46,6 +74,12 @@
 							"path": [
 								"usuario",
 								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTk1Njc3OTgzLCJpYXQiOjE1OTU2MDU5ODN9.-PFxfL_uYlATsUjP2HfNqNsFTgA1G3j0qGOf8ScTXXU"
+								}
 							]
 						}
 					},
@@ -185,20 +219,12 @@
 							}
 						],
 						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "email",
-									"value": "test10@test.10com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123456",
-									"type": "text"
-								}
-							],
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"iot@iot.com\",\r\n    \"password\": 123456\r\n}",
 							"options": {
+								"raw": {
+									"language": "json"
+								},
 								"urlencoded": {}
 							}
 						},
@@ -241,7 +267,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/buscarPorId?id=12",
+							"raw": "http://localhost:8091/usuario/buscarPorId?id=2&Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NTY4MTk1OSwiaWF0IjoxNTk1NjA5OTU5fQ.vVDjI5fqIEQszDk_ljD1UGGRERYuSxsAcOKywzMFGwc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -254,7 +280,11 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "12"
+									"value": "2"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NTY4MTk1OSwiaWF0IjoxNTk1NjA5OTU5fQ.vVDjI5fqIEQszDk_ljD1UGGRERYuSxsAcOKywzMFGwc"
 								}
 							]
 						}
@@ -343,6 +373,56 @@
 								{
 									"key": "Authorization",
 									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NkB0ZXN0Ni5jb20iLCJleHAiOjE1OTQ3NDE4MTQsImlhdCI6MTU5NDY2OTgxNH0.dk-HFJ019NrGXGaHHbETphqUB9IaWDE315H-CVv-bQE"
+								}
+							]
+						},
+						"description": "Obtener por pagina es un servicio el cual entrega todos los usuarios\r\nAtributos:\r\nsize: numero de elementos que se quiere que traiga en la pagina\r\npagina: numero de pagina donde se quiere buscar\r\norder: 1 = descending OPCIONAL\r\norder: 0 = ascending  OPCIONAL\r\ncampoOrdenar: nombre del capo a ordenar por defecto fechaCreacion OPCIONAÑ\r\nlistaBuscarCriterio: AQUI SI SE QUIERE ALGUNA BUSQUEDA SE ENDRA QUE ESPEFIcar\r\n\r\nEjemplo 1:\r\nBusca en el campo \"email\" todo lo que coincidan con el .com\r\n{\r\n   \"pagina\":1,\r\n   \"size\":5,\r\n   \"order\": 1\r\n   \"listaBuscarCriterio\":[\r\n     {\"key\":\"email\", \"value\":[\".com\"], \"operacion\": \"MATCH\"}\r\n   ]\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario:Eliminar Por Lista Ids",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[15684]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuario/eliminarPorListaIds?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUB0ZXN0MS5jb20iLCJleHAiOjE1OTUzMzI0MTQsImlhdCI6MTU5NTI2MDQxNH0.ZJsoR1CoVn_yFar4EoMmekyOhWN2gK4h5VL_koItVQQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuario",
+								"eliminarPorListaIds"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUB0ZXN0MS5jb20iLCJleHAiOjE1OTUzMzI0MTQsImlhdCI6MTU5NTI2MDQxNH0.ZJsoR1CoVn_yFar4EoMmekyOhWN2gK4h5VL_koItVQQ"
 								}
 							]
 						},
@@ -661,7 +741,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nombreUsuario\": \"Ricado Quishpe15\",\n\t\"codigo\":\"8888\",\n\t\"clave\":\"12345\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"098718813713\",\n\t\"predeterminado\": 1\n}",
+							"raw": "{\n\t\"nombreUsuario\": \"Ricado\",\n\t\"codigo\":\"8888\",\n\t\"clave\":\"12345\",\n\t\"nombre1\": \"Stalyn\",\n\t\"nombre2\": \"Ricardo\",\n\t\"genero\": \"1\",\n\t\"direccion\": \"QuitoSur\",\n\t\"identificacion\": \"1722439120\",\n\t\"activo\": 1,\n\t\"telefono\": \"098718813713\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -811,6 +891,696 @@
 						"description": "Puedes carga png, jpg"
 					},
 					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Modulo Region",
+			"item": [
+				{
+					"name": "REGION: ObtenerListaPagina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/region/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGION:CREAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"nombre\":\"CAMPO B\",\n   \"tipoRegion\":        {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idTipoRegion\": 1,\n        \"nombre\": \"REGION\",\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/region/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGION:ASINGNAR REGION-PADRE-A-HIJOS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"fechaCreacion\":\"2020-07-28\",\n   \"usuarioCreacion\":\"makerSolu\",\n   \"fechaModificacion\":null,\n   \"usuarioModificacion\":null,\n   \"eliminado\":false,\n   \"idRegion\":54,\n   \"nombre\":\"CAMPO B\",\n   \"etiqueta\":null,\n   \"descripcion\":null,\n   \"activo\":true,\n   \"tipoRegion\":{\n      \"fechaCreacion\":\"2020-07-28\",\n      \"usuarioCreacion\":\"makerSolu\",\n      \"fechaModificacion\":null,\n      \"usuarioModificacion\":null,\n      \"eliminado\":false,\n      \"idTipoRegion\":1,\n      \"nombre\":\"REGION\",\n      \"id\":1\n   },\n   \"regionPadre\":{\n      \"fechaCreacion\":\"2020-07-28\",\n      \"usuarioCreacion\":\"makerSolu\",\n      \"fechaModificacion\":null,\n      \"usuarioModificacion\":null,\n      \"eliminado\":false,\n      \"idRegion\":52,\n      \"nombre\":\"REGION\",\n      \"etiqueta\":null,\n      \"descripcion\":null,\n      \"activo\":true,\n      \"tipoRegion\":{\n         \"fechaCreacion\":\"2020-07-28\",\n         \"usuarioCreacion\":\"makerSolu\",\n         \"fechaModificacion\":null,\n         \"usuarioModificacion\":null,\n         \"eliminado\":false,\n         \"idTipoRegion\":1,\n         \"nombre\":\"REGION\",\n         \"id\":1\n      },\n      \"regionPadre\":null,\n      \"id\":52\n   },\n   \"id\":54\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/region/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGION:EDITAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"nombre\":\"REG-D\",\n   \"tipoRegion\":     {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idTipoRegion\": 56,\n        \"nombre\": \"REGION-C56\",\n        \"id\": 56\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/region/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-REGION: ObtenerListaPagina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tiporegion/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tiporegion",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-REGION:CREAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"nombre\":\"REGION-h\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tiporegion/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tiporegion",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-REGION:EDITAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fechaCreacion\": \"2020-07-28\",\n    \"usuarioCreacion\": \"makerSolu\",\n    \"fechaModificacion\": \"2020-07-28\",\n    \"usuarioModificacion\": \"STALYN QUISHPE\",\n    \"eliminado\": false,\n    \"idTipoRegion\": 102,\n    \"nombre\": \"REGION-UUU\",\n    \"id\": 102\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tiporegion/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tiporegion",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-REGION:ELIMINAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fechaCreacion\": \"2020-07-28\",\n    \"usuarioCreacion\": \"makerSolu\",\n    \"fechaModificacion\": \"2020-07-28\",\n    \"usuarioModificacion\": \"STALYN QUISHPE\",\n    \"eliminado\": true,\n    \"idTipoRegion\": 102,\n    \"nombre\": \"REGION-UUU\",\n    \"id\": 102\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tiporegion/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tiporegion",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Modulo Dispositivos",
+			"item": [
+				{
+					"name": "DISPOSITIVO: ObtenerListaPagina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivo",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DISPOSITIVO:CREAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"nombre\":\"TEMP 03\",\n   \"region\":    {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idRegion\": 53,\n        \"nombre\": \"CAMPO A\",\n        \"etiqueta\": null,\n        \"descripcion\": null,\n        \"activo\": true,\n        \"id\": 53\n    },\n    \"tipoDispositivo\": {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idTipoDispositivo\": 1,\n        \"nombre\": \"SENSOR TEMPERATURA\",\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DISPOSITIVO:EDITAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fechaCreacion\": \"2020-07-28\",\n    \"usuarioCreacion\": \"makerSolu\",\n    \"fechaModificacion\": null,\n    \"usuarioModificacion\": null,\n    \"eliminado\": false,\n    \"idDispositivo\": 4,\n    \"nombre\": \"TEMP 01ED\",\n    \"etiqueta\": null,\n    \"descripcion\": null,\n    \"gateway\": false,\n    \"activo\": true,\n    \"tipoDispositivo\": {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idTipoDispositivo\": 1,\n        \"nombre\": \"SENSOR TEMPERATURA\",\n        \"id\": 1\n    },\n    \"region\": {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idRegion\": 53,\n        \"nombre\": \"CAMPO A\",\n        \"etiqueta\": null,\n        \"descripcion\": null,\n        \"activo\": true,\n        \"tipoRegion\": null,\n        \"regionPadre\": null,\n        \"id\": 53\n    },\n    \"id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DISPOSITIVO:ELIMINAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fechaCreacion\": \"2020-07-28\",\n    \"usuarioCreacion\": \"makerSolu\",\n    \"fechaModificacion\": null,\n    \"usuarioModificacion\": null,\n    \"eliminado\": true,\n    \"idDispositivo\": 4,\n    \"nombre\": \"TEMP 01\",\n    \"etiqueta\": null,\n    \"descripcion\": null,\n    \"gateway\": false,\n    \"activo\": true,\n    \"tipoDispositivo\": {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idTipoDispositivo\": 1,\n        \"nombre\": \"SENSOR TEMPERATURA\",\n        \"id\": 1\n    },\n    \"region\": {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idRegion\": 53,\n        \"nombre\": \"CAMPO A\",\n        \"etiqueta\": null,\n        \"descripcion\": null,\n        \"activo\": true,\n        \"tipoRegion\": null,\n        \"regionPadre\": null,\n        \"id\": 53\n    },\n    \"id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-DISPOSITIVO: ObtenerListaPagina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tipodispositivo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tipodispositivo",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-DISPOSITIVO:CREAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"nombre\":\"SENSOR OXIGENO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tipodispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tipodispositivo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-DISPOSITIVO:EDITAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fechaCreacion\": \"2020-07-28\",\n    \"usuarioCreacion\": \"makerSolu\",\n    \"fechaModificacion\": \"2020-07-28\",\n    \"usuarioModificacion\": \"STALYN QUISHPE\",\n    \"eliminado\": false,\n    \"idTipoDispositivo\": 6,\n    \"nombre\": \"SENSOR OXIGENO ED\",\n    \"listaDispositivos\": [],\n    \"id\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tipodispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tipodispositivo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO-DISPOSITIVO:ELIMINAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": true,\n        \"idTipoDispositivo\": 4,\n        \"nombre\": \"SENSOR AGUA\",\n        \"id\": 4\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tipodispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tipodispositivo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "05ed50b4-b808-4d7c-aa24-40025ba2f454",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "736575c2-7f2d-4192-bcbc-bac21b1a23f4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			],
 			"protocolProfileBehavior": {}
