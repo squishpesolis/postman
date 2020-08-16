@@ -409,7 +409,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/usuario/eliminarPorListaIds?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUB0ZXN0MS5jb20iLCJleHAiOjE1OTUzMzI0MTQsImlhdCI6MTU5NTI2MDQxNH0.ZJsoR1CoVn_yFar4EoMmekyOhWN2gK4h5VL_koItVQQ",
+							"raw": "http://localhost:8091/usuario/eliminarPorListaIds?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -422,7 +422,7 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUB0ZXN0MS5jb20iLCJleHAiOjE1OTUzMzI0MTQsImlhdCI6MTU5NTI2MDQxNH0.ZJsoR1CoVn_yFar4EoMmekyOhWN2gK4h5VL_koItVQQ"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg"
 								}
 							]
 						},
@@ -913,7 +913,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/region/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"raw": "http://localhost:8091/region/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -926,7 +926,7 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg"
 								}
 							]
 						}
@@ -977,9 +977,12 @@
 					"response": []
 				},
 				{
-					"name": "REGION:ASINGNAR REGION-PADRE-A-HIJOS",
+					"name": "REGION:llenarListaRegionRelacion:TraerHijos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -999,7 +1002,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/region/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"raw": "http://localhost:8091/region/llenarListaRegionRelacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg&id=102&direccion=desde",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1007,15 +1010,79 @@
 							"port": "8091",
 							"path": [
 								"region",
-								"guardar"
+								"llenarListaRegionRelacion"
 							],
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg"
+								},
+								{
+									"key": "id",
+									"value": "102"
+								},
+								{
+									"key": "direccion",
+									"value": "desde"
 								}
 							]
-						}
+						},
+						"description": "Tiene dos funcionalidades, trae el padre enviando el id de su hijo\r\no traer los hijos envianto el id del padre"
+					},
+					"response": []
+				},
+				{
+					"name": "REGION:llenarListaRegionRelacion:TraerPadres",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"fechaCreacion\":\"2020-07-28\",\n   \"usuarioCreacion\":\"makerSolu\",\n   \"fechaModificacion\":null,\n   \"usuarioModificacion\":null,\n   \"eliminado\":false,\n   \"idRegion\":54,\n   \"nombre\":\"CAMPO B\",\n   \"etiqueta\":null,\n   \"descripcion\":null,\n   \"activo\":true,\n   \"tipoRegion\":{\n      \"fechaCreacion\":\"2020-07-28\",\n      \"usuarioCreacion\":\"makerSolu\",\n      \"fechaModificacion\":null,\n      \"usuarioModificacion\":null,\n      \"eliminado\":false,\n      \"idTipoRegion\":1,\n      \"nombre\":\"REGION\",\n      \"id\":1\n   },\n   \"regionPadre\":{\n      \"fechaCreacion\":\"2020-07-28\",\n      \"usuarioCreacion\":\"makerSolu\",\n      \"fechaModificacion\":null,\n      \"usuarioModificacion\":null,\n      \"eliminado\":false,\n      \"idRegion\":52,\n      \"nombre\":\"REGION\",\n      \"etiqueta\":null,\n      \"descripcion\":null,\n      \"activo\":true,\n      \"tipoRegion\":{\n         \"fechaCreacion\":\"2020-07-28\",\n         \"usuarioCreacion\":\"makerSolu\",\n         \"fechaModificacion\":null,\n         \"usuarioModificacion\":null,\n         \"eliminado\":false,\n         \"idTipoRegion\":1,\n         \"nombre\":\"REGION\",\n         \"id\":1\n      },\n      \"regionPadre\":null,\n      \"id\":52\n   },\n   \"id\":54\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/region/llenarListaRegionRelacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg&id=252&direccion=hacia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"llenarListaRegionRelacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg"
+								},
+								{
+									"key": "id",
+									"value": "252"
+								},
+								{
+									"key": "direccion",
+									"value": "hacia"
+								}
+							]
+						},
+						"description": "Tiene dos funcionalidades, trae el padre enviando el id de su hijo\r\no traer los hijos envianto el id del padre"
 					},
 					"response": []
 				},
@@ -1225,6 +1292,109 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "TIPO-REGION:AUTOCOMPLETAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/tiporegion/autocompletarEntidad?key=nombre&cadena=cr&Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjExNTAzOCwiaWF0IjoxNTk2MDQzMDM4fQ.aLyy0GF2jpgdnqf3Rr4Vq2NUbn1v4CdW_aF3REPsWHQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tiporegion",
+								"autocompletarEntidad"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "nombre"
+								},
+								{
+									"key": "cadena",
+									"value": "cr"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjExNTAzOCwiaWF0IjoxNTk2MDQzMDM4fQ.aLyy0GF2jpgdnqf3Rr4Vq2NUbn1v4CdW_aF3REPsWHQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGION:AUTOCOMPLETAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/region/autocompletarEntidad?key=nombre&cadena=  &Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjE5NzY0MiwiaWF0IjoxNTk2MTI1NjQyfQ.BEFKU1QG6QHwYJ5G6_CmL8zCkQIjAYOwiTGUoKplpSM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"autocompletarEntidad"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "nombre"
+								},
+								{
+									"key": "cadena",
+									"value": "  "
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjE5NzY0MiwiaWF0IjoxNTk2MTI1NjQyfQ.BEFKU1QG6QHwYJ5G6_CmL8zCkQIjAYOwiTGUoKplpSM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGION: ELIMINAR VARIOS HIJOS :desde",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 102,\r\n    \"listaIdQuitar\": [],\r\n    \"direccion\": \"desde\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/region/quitarRegionRelacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"region",
+								"quitarRegionRelacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjY0Nzk4NiwiaWF0IjoxNTk2NTc1OTg2fQ.0ryPQd-NLyQcyNQXZ6n_77-0Nc3x9HCPQmtWQ3JUoIg"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1233,21 +1403,12 @@
 			"name": "Modulo Dispositivos",
 			"item": [
 				{
-					"name": "DISPOSITIVO: ObtenerListaPagina",
+					"name": "DISPOSITIVO: ObtenerDispositivosPorIdRegion",
 					"request": {
-						"method": "PUT",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8091/dispositivo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"raw": "http://localhost:8091/dispositivo/obtenerDispositivosPorIdRegion?id=4&Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5Njc5NzQyMCwiaWF0IjoxNTk2NzI1NDIwfQ.KZa28HO9lCdNrOH_qraJmDcs6MExre2CtquCAQ8Abvk",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1255,12 +1416,16 @@
 							"port": "8091",
 							"path": [
 								"dispositivo",
-								"obtenerListaPorPaginacion"
+								"obtenerDispositivosPorIdRegion"
 							],
 							"query": [
 								{
+									"key": "id",
+									"value": "4"
+								},
+								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5Njc5NzQyMCwiaWF0IjoxNTk2NzI1NDIwfQ.KZa28HO9lCdNrOH_qraJmDcs6MExre2CtquCAQ8Abvk"
 								}
 							]
 						}
@@ -1282,7 +1447,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"nombre\":\"TEMP 03\",\n   \"region\":    {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idRegion\": 53,\n        \"nombre\": \"CAMPO A\",\n        \"etiqueta\": null,\n        \"descripcion\": null,\n        \"activo\": true,\n        \"id\": 53\n    },\n    \"tipoDispositivo\": {\n        \"fechaCreacion\": \"2020-07-28\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"eliminado\": false,\n        \"idTipoDispositivo\": 1,\n        \"nombre\": \"SENSOR TEMPERATURA\",\n        \"id\": 1\n    }\n}",
+							"raw": "{\n   \"nombre\":\"TEMP 01\",\n    \"tipoDispositivo\":     {\n        \"fechaCreacion\": \"15-08-2020 18:33:09\",\n        \"usuarioCreacion\": \"makerSolu\",\n        \"fechaModificacion\": null,\n        \"usuarioModificacion\": null,\n        \"idTipoDispositivo\": 1,\n        \"nombre\": \"SENSOR TEMPERATURA\",\n        \"id\": 1,\n        \"eliminado\": false\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1290,7 +1455,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/dispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"raw": "http://localhost:8091/dispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1303,7 +1468,7 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
 								}
 							]
 						}
@@ -1397,6 +1562,76 @@
 					"response": []
 				},
 				{
+					"name": "DISPOSITIVO: ObtenerListaPagina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivo",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DISPOSITIVO: Desvincular Dispositivo de Region",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[52]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivo/devincularDispositivosDeRegion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjgxNzA3OSwiaWF0IjoxNTk2NzQ1MDc5fQ.npNEcAX193k39DBHTuTRtU--7wijzvqk7qiqreimIHg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivo",
+								"devincularDispositivosDeRegion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjgxNzA3OSwiaWF0IjoxNTk2NzQ1MDc5fQ.npNEcAX193k39DBHTuTRtU--7wijzvqk7qiqreimIHg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "TIPO-DISPOSITIVO: ObtenerListaPagina",
 					"request": {
 						"method": "PUT",
@@ -1411,7 +1646,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/tipodispositivo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"raw": "http://localhost:8091/tipodispositivo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1424,7 +1659,7 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
 								}
 							]
 						}
@@ -1446,7 +1681,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"nombre\":\"SENSOR OXIGENO\"\n}",
+							"raw": "{\n   \"nombre\":\"SENSOR TEMPERATURA\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1454,7 +1689,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/tipodispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw",
+							"raw": "http://localhost:8091/tipodispositivo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1467,7 +1702,7 @@
 							"query": [
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NjA0MTI5MywiaWF0IjoxNTk1OTY5MjkzfQ.ye5DVbGzkEQMJjDGp03ctotfnfb0fGcrdFTq_eondXw"
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
 								}
 							]
 						}
@@ -1576,6 +1811,168 @@
 					"listen": "test",
 					"script": {
 						"id": "736575c2-7f2d-4192-bcbc-bac21b1a23f4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dispositivo Atributos",
+			"item": [
+				{
+					"name": "ATRIBUTO:ObjenetListaPagina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pagina\":0,\"size\":20,\"order\":1,\"campoOrdenar\":\"fechaCreacion\",\"listaBuscarCriterio\":[]}"
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivoAtributo/obtenerListaPorPaginacion?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivoAtributo",
+								"obtenerListaPorPaginacion"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATRIBUTO: CREAR:TIPOATRIBUTO:COMPARTIDO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"key\":\"Frecuencia de actualizacion-2\",\r\n   \"tipoAtributo\": \"COMPARTIDO\",\r\n   \"tipoValor\": \"INTEGER\",\r\n   \"valorInteger\": 1,\r\n    \"dispositivo\":           {\r\n        \"fechaCreacion\": \"15-08-2020 22:06:16\",\r\n        \"usuarioCreacion\": \"makerSolu\",\r\n        \"fechaModificacion\": null,\r\n        \"usuarioModificacion\": null,\r\n        \"idDispositivo\": 2,\r\n        \"uuid\": null,\r\n        \"nombre\": \"TEMP 01\",\r\n        \"etiqueta\": null,\r\n        \"descripcion\": null,\r\n        \"gateway\": false,\r\n        \"activo\": true,\r\n        \"conectado\": false,\r\n        \"tipoDispositivo\": {\r\n            \"fechaCreacion\": \"15-08-2020 22:06:10\",\r\n            \"usuarioCreacion\": \"makerSolu\",\r\n            \"fechaModificacion\": null,\r\n            \"usuarioModificacion\": null,\r\n            \"idTipoDispositivo\": 1,\r\n            \"nombre\": \"SENSOR TEMPERATURA\",\r\n            \"id\": 1,\r\n            \"eliminado\": false\r\n        },\r\n        \"region\": null,\r\n        \"listaAtributos\": null,\r\n        \"id\": 2,\r\n        \"eliminado\": false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivoAtributo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivoAtributo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATRIBUTO: EDITAR:TIPOATRIBUTO:COMPARTIDO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaCreacion\": \"15-08-2020 20:37:17\",\r\n    \"usuarioCreacion\": \"makerSolu\",\r\n    \"fechaModificacion\": null,\r\n    \"usuarioModificacion\": null,\r\n    \"idAtributoDispositivo\": 1,\r\n    \"key\": \"Frecuencia de actualizacion\",\r\n    \"tipoAtributo\": \"COMPARTIDO\",\r\n    \"tipoValor\": \"STRING\",\r\n    \"valorString\": \"asdadasd\",\r\n    \"valorInteger\": 2,\r\n    \"valorBoolean\": true,\r\n    \"dispositivo\": {\r\n        \"fechaCreacion\": \"15-08-2020 20:36:24\",\r\n        \"usuarioCreacion\": \"makerSolu\",\r\n        \"fechaModificacion\": null,\r\n        \"usuarioModificacion\": null,\r\n        \"idDispositivo\": 1,\r\n        \"uuid\": null,\r\n        \"nombre\": \"TEMP 01\",\r\n        \"etiqueta\": null,\r\n        \"descripcion\": null,\r\n        \"gateway\": false,\r\n        \"activo\": true,\r\n        \"conectado\": false,\r\n        \"tipoDispositivo\": {\r\n            \"fechaCreacion\": \"15-08-2020 20:35:51\",\r\n            \"usuarioCreacion\": \"makerSolu\",\r\n            \"fechaModificacion\": null,\r\n            \"usuarioModificacion\": null,\r\n            \"idTipoDispositivo\": 1,\r\n            \"nombre\": \"SENSOR TEMPERATURA\",\r\n            \"id\": 1,\r\n            \"eliminado\": false\r\n        },\r\n        \"region\": null,\r\n        \"listaAtributos\": null,\r\n        \"id\": 1,\r\n        \"eliminado\": false\r\n    },\r\n    \"id\": 1,\r\n    \"eliminado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/dispositivoAtributo/guardar?Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivoAtributo",
+								"guardar"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATRIBUTO: ObtenerListraAtributosPorDispositivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/dispositivoAtributo/obtenerListaAtributosPorDispositivo?tipoAtributo=COMPARTIDO&idDispositivo=1&Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"dispositivoAtributo",
+								"obtenerListaAtributosPorDispositivo"
+							],
+							"query": [
+								{
+									"key": "tipoAtributo",
+									"value": "COMPARTIDO"
+								},
+								{
+									"key": "idDispositivo",
+									"value": "1"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpb3RAaW90LmNvbSIsImV4cCI6MTU5NzYwMzU1NywiaWF0IjoxNTk3NTMxNTU3fQ.A8GMDBGXR768mFlzO3CjOIhYOJcgVqTLZj8EWEwNhQw"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c115817d-8dac-47f5-b167-d0db1a97946b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1d02f5f-4f9a-455c-916d-4b64e80cd336",
 						"type": "text/javascript",
 						"exec": [
 							""
